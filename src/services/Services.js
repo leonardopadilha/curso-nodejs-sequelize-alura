@@ -10,4 +10,15 @@ class Services {
   }
 }
 
+async atualizaRegistro(dadosAtualizados, id) {
+    const listaDeRegistrosAtualizados = dataSource[this.model].update(dadosAtualizados, {
+        where: { id: id }
+    })
+
+    if (listaDeRegistrosAtualizados[0] === 0) {
+        return false;
+    }
+    return true;
+}
+
 module.exports = Services;
