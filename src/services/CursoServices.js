@@ -6,4 +6,4 @@ class CursoServices extends Services {
   }
 }
 
-module.exports = CursoService;
+module.exports = CursoServices;
